@@ -56,8 +56,15 @@ public class JavaSpringTemplateApplication {
 		shorts.valor = 76.00;
 
     listaDeProdutos.add(shorts);
+
+    Produto meia = new Produto();    
+		meia.codigo = 3;
+		meia.descricao = "Meia";
+		meia.valor = 24.00;
+
+    listaDeProdutos.add(meia);
 		
-		Produto produtoEncontrado = Produto.buscarProdutoPeloId(listaDeProdutos, 2);
+		Produto produtoEncontrado = Produto.buscarProdutoPeloId(listaDeProdutos, 3);
 		
 		System.out.println("codigo: " + produtoEncontrado.codigo + ", descricao: " + produtoEncontrado.descricao + ", valor: " + produtoEncontrado.valor);
 	}
