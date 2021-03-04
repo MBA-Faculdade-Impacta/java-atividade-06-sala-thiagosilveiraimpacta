@@ -43,16 +43,23 @@ public class JavaSpringTemplateApplication {
 		 */
 		ArrayList<Produto> listaDeProdutos = new ArrayList<>();
 		
-		Produto produto = new Produto();
-		produto.codigo = 1;
-		produto.descricao = "Camisa";
-		produto.valor = 70.00;
+		Produto camisa = new Produto();
+		camisa.codigo = 1;
+		camisa.descricao = "Camisa";
+		camisa.valor = 70.00;
 		
-		listaDeProdutos.add(produto);
+		listaDeProdutos.add(camisa);
+
+    Produto shorts = new Produto();    
+		shorts.codigo = 2;
+		shorts.descricao = "Shorts";
+		shorts.valor = 76.00;
+
+    listaDeProdutos.add(shorts);
 		
-		Produto produtoEncontrado = Produto.buscarProdutoPeloId(listaDeProdutos, 1);
+		Produto produtoEncontrado = Produto.buscarProdutoPeloId(listaDeProdutos, 2);
 		
-		System.out.println(produtoEncontrado);
+		System.out.println("codigo: " + produtoEncontrado.codigo + ", descricao: " + produtoEncontrado.descricao + ", valor: " + produtoEncontrado.valor);
 	}
 
 }
